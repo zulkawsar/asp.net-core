@@ -2,7 +2,7 @@
 
 namespace Games.Repository
 {
-    public class GameRepository
+    public class GameRepository : IGameRepository
     {
         private readonly List<Game> games = new()
         {
@@ -29,7 +29,7 @@ namespace Games.Repository
             return games;
         }
 
-        public Game? show( int id)
+        public Game? show(int id)
         {
             return games.Find(game => game.Id == id);
         }
@@ -45,7 +45,7 @@ namespace Games.Repository
             var GameIndex = games.FindIndex(game => game.Id == id);
             gameUpdate.Id = id;
             games[GameIndex] = gameUpdate;
-            
+
         }
 
     }

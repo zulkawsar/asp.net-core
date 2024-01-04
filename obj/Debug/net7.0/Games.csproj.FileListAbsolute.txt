@@ -29,3 +29,4 @@ C:\Users\zulka\source\repos\Games\bin\Debug\net7.0\MiniValidation.dll
 C:\Users\zulka\source\repos\Games\obj\Debug\net7.0\Games.csproj.AssemblyReference.cache
 C:\Users\zulka\source\repos\Games\obj\Debug\net7.0\Games.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\zulka\source\repos\Games\obj\Debug\net7.0\Games.csproj.CopyComplete
+C:\Users\zulka\source\repos\Games\obj\Debug\net7.0\Games.sourcelink.json

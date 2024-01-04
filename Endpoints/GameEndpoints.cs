@@ -7,18 +7,17 @@ namespace Games.Endpoints
    {
         public static RouteGroupBuilder MapGameEnpoint ( this IEndpointRouteBuilder route) {
 
-            GameRepository gameRepository = new();
 
             var group = route.MapGroup("/games")
                .WithParameterValidation();
 
-            group.MapGet("/", () => gameRepository.GetGames());
+            group.MapGet("/", (IGameRepository gameRepository) => gameRepository.GetGames());
 
-            group.MapGet("/{id}", (int id) => gameRepository.show(id));
+            group.MapGet("/{id}", (IGameRepository gameRepository, int id) => gameRepository.show(id));
 
-            group.MapPost("/", (Game game) => gameRepository.create(game));
+            group.MapPost("/", (IGameRepository gameRepository, Game game) => gameRepository.create(game));
 
-            group.MapPut("/{id}", (int id, Game gameUpdate) => gameRepository.update(id, gameUpdate));
+            group.MapPut("/{id}", (IGameRepository gameRepository, int id, Game gameUpdate) => gameRepository.update(id, gameUpdate));
             return group;
         } 
     }
