@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hNLeMM5n9RujsB/TJpcdpZjHoIDZL+bdWfwESrEIT93jl8HWEK9YiK89/NkNKWVsq2u4MBTnGISalYG2zs8e3Q==",
+  "dgSpecHash": "BlKaSGXVaWoYCLYmVZRMBM+qnzFTlaCLQwPCjO9G3xY+cHeVjstr14h7MOxOh9q/piYYi2eZq93JX/bLR/NMqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zulka\\source\\repos\\Games\\Games.csproj",
+  "projectFilePath": "/var/www/html/asp.net-core/Games.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\zulka\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
-    "C:\\Users\\zulka\\.nuget\\packages\\minimalapis.extensions\\0.11.0\\minimalapis.extensions.0.11.0.nupkg.sha512",
-    "C:\\Users\\zulka\\.nuget\\packages\\minivalidation\\0.8.0\\minivalidation.0.8.0.nupkg.sha512"
+    "/home/zulkawsar/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/home/zulkawsar/.nuget/packages/minimalapis.extensions/0.11.0/minimalapis.extensions.0.11.0.nupkg.sha512",
+    "/home/zulkawsar/.nuget/packages/minivalidation/0.8.0/minivalidation.0.8.0.nupkg.sha512"
   ],
   "logs": []
 }
