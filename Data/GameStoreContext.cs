@@ -1,3 +1,4 @@
+using System.Reflection;
 using Games.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,5 +12,10 @@ namespace Games.Data
         }
 
         public DbSet<Game> Games => Set<Game>();
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
     }
 }
