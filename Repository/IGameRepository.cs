@@ -4,9 +4,9 @@ namespace Games.Repository
 {
     public interface IGameRepository
     {
-        void create(Game game);
-        IEnumerable<Game> GetGames();
-        Game? show(int id);
-        void update(int id, Game gameUpdate);
+        Task create(Game game);
+        Task<IEnumerable<Game>> GetGames();
+        Task<Game?> show(int id);
+        Task update(int id, Game gameUpdate);
     }
 }

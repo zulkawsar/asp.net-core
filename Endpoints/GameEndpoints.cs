@@ -13,18 +13,18 @@ namespace Games.Endpoints
             var group = route.MapGroup("/games")
                .WithParameterValidation();
 
-            group.MapGet("/", (IGameRepository gameRepository) =>
-                gameRepository.GetGames().Select(game => game.AsDtos())
+            group.MapGet("/", async (IGameRepository gameRepository) =>
+                (await gameRepository.GetGames()).Select(game => game.AsDtos())
 
             );
 
-            group.MapGet("/{id}", (IGameRepository gameRepository, int id) =>
+            group.MapGet("/{id}", async (IGameRepository gameRepository, int id) =>
             {
-                Game? game = gameRepository.show(id);
+                Game? game = await gameRepository.show(id);
                 return game is not null ? Results.Ok(game.AsDtos()) : Results.NotFound();
             }).WithName(GetGameEndpointName);
 
-            group.MapPost("/", (IGameRepository gameRepository, CreateGameDtos gameDto) => 
+            group.MapPost("/", async (IGameRepository gameRepository, CreateGameDtos gameDto) => 
             {
                 Game game = new()
                 {
@@ -34,7 +34,8 @@ namespace Games.Endpoints
                     ReleaseDate = gameDto.ReleaseDate
 
                 };
-                gameRepository.create(game);
+
+                await gameRepository.create(game);
                 return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);
             });
 
